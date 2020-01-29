@@ -10,7 +10,7 @@ public class IntroToArrayLists {
 		//2. Add five Strings to your list
 		strings.add("Machoke on these nuts");
 		strings.add("Joe Mama");
-		strings.add("Graham Winters");
+		strings.add("Graham Winter");
 		strings.add("Armen Dahi");
 		strings.add("James Ward");
 		//3. Print all the Strings using a standard for-loop

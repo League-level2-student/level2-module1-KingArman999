@@ -1,10 +1,15 @@
 package intro_to_array_lists;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-public class GuestBook {
+public class GuestBook implements ActionListener {
 	// Create a GUI with two buttons. One button reads "Add Name" and the other button reads "View Names". 
 	// When the add name button is clicked, display an input dialog that asks the user to enter a name. Add
 	// that name to an ArrayList. When the "View Names" button is clicked, display a message dialog that displays
@@ -13,12 +18,39 @@ public class GuestBook {
 	// Guest #2: Sandy Summers
 	// Guest #3: Greg Ganders
 	// Guest #4: Donny Doners
+	ArrayList<String> names = new ArrayList<String>();
+	
 	JFrame frame = new JFrame();
 	JPanel panel = new JPanel();
-	JButton button1 = new JButton();
-	JButton button2 = new JButton();
+	JButton addName = new JButton();
+	JButton viewName = new JButton();
 	void start(){
-		
-		
+		frame.add(panel);
+		panel.add(addName);
+		panel.add(viewName);
+		addName.setText("Add Names");
+		viewName.setText("View Names");
+		addName.addActionListener(this);
+		viewName.addActionListener(this);
+		names.add("Barry Sanders");
+		names.add("Sandy Summers");
+		names.add("Greg Ganders");
+		names.add("Donny Doners");
+		frame.setVisible(true);
+		frame.pack();
+	}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		JButton buttonPressed =(JButton) e.getSource();
+		if (buttonPressed.equals(addName)) {
+			String newName  = JOptionPane.showInputDialog("Enter a name.");
+			names.add(newName);
+		}else if(buttonPressed.equals(viewName)){
+			for(int i = 0; i < names.size(); i++){
+				String s = names.get(i);
+				System.out.println(s);
+			}
+		}
 	}
 }
