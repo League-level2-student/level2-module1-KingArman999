@@ -11,7 +11,7 @@ public class IntroToArrayLists {
 		strings.add("Machoke on these nuts");
 		strings.add("Joe Mama");
 		strings.add("Graham Winter");
-		strings.add("Armen Dahi");
+		strings.add("Arman Dahi");
 		strings.add("James Ward");
 		//3. Print all the Strings using a standard for-loop
 		for (int i = 0; i < strings.size(); i++) {
