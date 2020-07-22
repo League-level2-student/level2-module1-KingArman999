@@ -16,7 +16,7 @@ public class IntroToArrayLists {
 		//3. Print all the Strings using a standard for-loop
 		for (int i = 0; i < strings.size(); i++) {
 			String s = strings.get(i);
-			System.out.println("String at element " + i + " " + s);
+			System.out.println(s);
 		}
 		//4. Print all the Strings using a for-each loop
 		for(String s : strings){
